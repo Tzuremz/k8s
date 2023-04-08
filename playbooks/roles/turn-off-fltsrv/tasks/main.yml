@@ -1,0 +1,7 @@
+---
+- name: stop basic flt servioces
+  shell:
+    cmd: /home/hifly_admin/hifly/GEN/release/admin/hiflySCS stop
+- name: stop    fltsrv central log   
+  shell:
+    cmd: /home/hifly_admin/centralLog/shutdown.sh

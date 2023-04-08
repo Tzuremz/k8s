@@ -1,0 +1,4 @@
+- name: turn on auto restartable machines
+  hosts: localhost
+  roles:
+    - restart-flrnms-arc-ec2

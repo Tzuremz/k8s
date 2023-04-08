@@ -1,0 +1,14 @@
+[all]
+52.210.172.102
+34.255.79.26
+34.254.142.122
+54.216.217.23
+
+#    [rf-fdss]
+#    rf-fdss01 ansible_user=focusadmin ansible_ssh_private_key_file=/home/hifly_admin/gmv-suse-keypair.pem
+
+[all:vars]
+ansible_python_interpreter=/usr/bin/python2
+ansible_ssh_private_key_file=/home/tzura/kyes/kpair-k8stzur.pem
+ansible_user=centos
+

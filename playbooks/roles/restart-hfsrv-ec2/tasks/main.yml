@@ -1,0 +1,11 @@
+---
+- name: restart a hfsrv01-06
+  amazon.aws.ec2_instance:
+    state: restarted
+    instance_ids: "{{ items }}"
+  vars:
+    items: "{{ ec2_hifly_hosts }}"
+
+- name: Sleep for 60 seconds wait
+  ansible.builtin.wait_for:
+    timeout: 60

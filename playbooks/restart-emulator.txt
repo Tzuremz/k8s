@@ -1,0 +1,5 @@
+ssh -X -i gmv-suse-keypair.pem rf-infra01
+ss –tlpan | grep 710   ##  (no TIME_WAIT should appear in the output)
+cd /home/hifly_admin/installation/demoScripts
+./1-StartTMTC.sh
+:

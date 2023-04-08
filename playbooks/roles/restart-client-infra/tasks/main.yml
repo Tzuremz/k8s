@@ -1,0 +1,28 @@
+---
+- name: Load amdgpu midule into kernel
+  modprobe:
+    name: amdgpu
+    state: present
+    params: '--allow-unsupported'
+- name: start agents on fleet hf servers
+  shell:
+    cmd:  /usr/sbin/hwinfo --gfxcard
+- name: Stop xdm 
+  ansible.builtin.systemd:
+    state: stopped
+    name: xdm.service
+- name: Stop nxservice - nomachine
+  ansible.builtin.systemd:
+    state: stopped
+    name: nxserver.service
+- name: Start xdm 
+  ansible.builtin.systemd:
+    state: started
+    name: xdm.service
+    enabled: yes
+- name: Start nxservice - nomachine
+  ansible.builtin.systemd:
+    state: started
+    name: nxserver.service
+    enabled: yes
+

@@ -1,0 +1,58 @@
+- name: Turn on  fleetnms arc01 and arc02 ec2
+  hosts: localhost
+  roles:
+    - restart-fltnms-arc-ec2
+
+- name: Turn on  satdb ec2 machine
+  hosts: localhost
+  roles:
+    - restart-satdb-ec2
+
+#    this one should be done vi NX run ~/BASYS/Server/start_server.sh
+- name: Restart satdb environment
+  hosts: rf-satdb
+  become: yes
+  roles:
+    - turn-on-satdb
+
+- name: Turn on  fdss and fdsw ec2
+  hosts: localhost
+  roles:
+    - restart-fds-ec2
+
+- name: turn on  fdss01
+  hosts: rf-fdss
+  roles:
+    - turn-on-fdss
+
+- name: Turn on  fltsrv01-03 ec2
+  hosts: localhost
+  roles:
+    - restart-fltsrv-ec2
+
+- name: turn on  fltsrv
+  hosts: rf-fltsrv
+  roles:
+    - turn-on-fltsrv
+
+- name: Turn on  hfsrv01-06 ec2
+  hosts: localhost
+  roles:
+    - restart-hfsrv-ec2
+
+- name: turn on  rf-hfsrv
+  hosts: rf-hfsrv
+  roles:
+    - turn-on-hfsrv
+
+- name: Turn on  wks01-03ec2
+  hosts: localhost
+  roles:
+    - restart-wks-ec2
+
+
+- name: restart wks01-03
+  hosts: rf-wks
+  become: yes
+  roles:
+    - turn-on-wks

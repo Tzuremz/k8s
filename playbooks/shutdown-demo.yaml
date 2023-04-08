@@ -1,0 +1,20 @@
+- name: turn off rf-hfsrv
+  hosts: rf-hfsrv
+  roles:
+    - turn-off-hfsrv
+- name: turn off fltsrv
+  hosts: rf-fltsrv
+  roles:
+    - turn-off-fltsrv
+- name: turn off satdb
+  hosts: rf-satdb
+  roles:
+    - turn-off-satdb
+- name: turn off fdss01
+  hosts: rf-fdss
+  roles:
+    - turn-off-fdss
+- name: Stop all EC2 GMV Machines in AWS
+  hosts: localhost
+  roles:
+    - stop-all-machines

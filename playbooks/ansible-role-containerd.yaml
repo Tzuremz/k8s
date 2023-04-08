@@ -1,0 +1,5 @@
+- name: turn on auto restartable machines
+  hosts: all
+  become: yes
+  roles:
+    - ansible-role-containerd

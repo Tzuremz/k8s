@@ -1,0 +1,48 @@
+ec2_free_hosts:
+  - i-01f2a64817aaf88f3
+  - i-0243a33b36abfeafa
+  - i-0cc98c975e6ad64a6
+ec2_hifly_hosts:
+  - i-0b38e12df5f986b80
+  - i-03a0f4980026321f0
+  - i-0a5842b2313e2f8f3
+  - i-093e7745eb0c98f8e
+  - i-07429353e648a6a81
+  - i-0f4d1b6cd2f5436b5
+ec2_flt_hosts:
+  - i-0f2c66ea1a23ec31c
+  - i-0899db3953f19b3e8
+  - i-0c55a7d9b7c17cc3b
+ec2_fdss_host:
+  - i-029f4fe0ec6c8ec37
+  - i-0445410fb6b56bd81
+ec2_satdb_host:
+  - i-0f139c3390a0efb13
+ec2_wks_hosts:
+  - i-088f1bae7440b5b80
+  - i-0adaf383cb04f2aea
+  - i-0d42d587e15c5717e
+ec2_gpu_hosts:
+  - i-088f1bae7440b5b80
+  - i-0adaf383cb04f2aea
+  - i-0d42d587e15c5717e
+  - i-029f4fe0ec6c8ec37
+ec2_all_hosts:
+  - i-01f2a64817aaf88f3
+  - i-0243a33b36abfeafa
+  - i-0cc98c975e6ad64a6
+  - i-0b38e12df5f986b80
+  - i-03a0f4980026321f0
+  - i-0a5842b2313e2f8f3
+  - i-093e7745eb0c98f8e
+  - i-07429353e648a6a81
+  - i-0f4d1b6cd2f5436b5
+  - i-0f2c66ea1a23ec31c
+  - i-0899db3953f19b3e8
+  - i-0c55a7d9b7c17cc3b
+  - i-029f4fe0ec6c8ec37
+  - i-0445410fb6b56bd81
+  - i-0f139c3390a0efb13
+  - i-088f1bae7440b5b80
+  - i-0adaf383cb04f2aea
+  - i-0d42d587e15c5717e

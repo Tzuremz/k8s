@@ -1,0 +1,15 @@
+---
+- name: Sleep for 60 seconds wait
+  ansible.builtin.wait_for:
+    timeout: 60
+
+- name: Stop all EC2 machines GMV Demo
+  amazon.aws.ec2_instance:
+    state: stopped
+    instance_ids: "{{ items }}"
+  vars:
+    items: "{{ ec2_all_hosts }}"
+
+- name: Sleep for 60 seconds wait
+  ansible.builtin.wait_for:
+    timeout: 60

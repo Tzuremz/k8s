@@ -1,0 +1,8 @@
+- name: turn off satdb
+  hosts: rf-satdb
+  roles:
+    - turn-off-satdb
+- name: Stop all EC2 GMV Machines in AWS
+  hosts: localhost
+  roles:
+    - stop-all-machines

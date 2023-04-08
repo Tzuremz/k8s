@@ -1,0 +1,5 @@
+---
+- name: Start service oda.agent
+  service:
+    name: oda.agent
+    state: started

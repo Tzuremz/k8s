@@ -1,0 +1,4 @@
+---
+- name: stop satdb 
+  shell:
+    cmd: /home/hifly_admin/BASYS/Server/satdb stop

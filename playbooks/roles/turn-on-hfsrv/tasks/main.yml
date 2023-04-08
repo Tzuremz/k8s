@@ -1,0 +1,8 @@
+---
+- name: Sleep for 60 seconds wait for fleet srv
+  ansible.builtin.wait_for:
+    timeout: 60
+
+- name: start hfsrv 
+  shell:
+    cmd: /home/hifly_admin/hifly/GEN/release/admin/hiflySCS start

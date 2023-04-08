@@ -1,0 +1,11 @@
+---
+- name: restart a satdb ec2 machine
+  amazon.aws.ec2_instance:
+    state: restarted
+    instance_ids: "{{ items }}"
+  vars:
+    items: "{{ ec2_satdb_host }}"
+
+- name: Sleep for 60 seconds wait
+  ansible.builtin.wait_for:
+    timeout: 60

@@ -1,0 +1,14 @@
+---
+- name: restart a particular instance by its ID
+  amazon.aws.ec2_instance:
+    state: stopped
+    instance_ids: "{{ items }}"
+  vars:
+    items: "{{ ec2_all_hosts }}"
+
+- name: Sleep for 60 seconds wait
+  ansible.builtin.wait_for:
+    timeout: 60
+#    - name: start hfsrv 
+#      shell:
+#        cmd: /home/hifly_admin/hifly/GEN/release/admin/hiflySCS start

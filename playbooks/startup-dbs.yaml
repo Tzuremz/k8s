@@ -1,0 +1,16 @@
+- name: Turn on  fleetnms arc01 and arc02 ec2
+  hosts: localhost
+  roles:
+    - restart-fltnms-arc-ec2
+
+- name: Turn on  satdb ec2 machine
+  hosts: localhost
+  roles:
+    - restart-satdb-ec2
+
+#    this one should be done vi NX run ~/BASYS/Server/start_server.sh
+- name: Restart satdb environment
+  hosts: rf-satdb
+  become: yes
+  roles:
+    - turn-on-satdb

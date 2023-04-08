@@ -1,0 +1,10 @@
+---
+- name: startup fleet srv central log 
+  shell:
+    cmd: /home/hifly_admin/centralLog/startup.sh
+- name: startup fleesrtv basic services
+  shell:
+    cmd: /home/hifly_admin/hifly/GEN/release/admin/hiflySCS start
+- name: Sleep for 90 after starting fleet srv 
+  ansible.builtin.wait_for:
+    timeout: 90

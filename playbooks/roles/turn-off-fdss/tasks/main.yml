@@ -1,0 +1,6 @@
+---
+- name: stop fdss  
+  become_user: focusadmin
+  shell:
+    chdir: /home/focusadmin/focussuite
+    cmd: ./StopFDS.sh

@@ -1,0 +1,6 @@
+---
+# vars file for check-server
+ec2_hosts:
+  - i-01f2a64817aaf88f3
+  - i-0243a33b36abfeafa
+  - i-0cc98c975e6ad64a6

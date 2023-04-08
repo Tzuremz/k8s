@@ -1,0 +1,37 @@
+- name: turn on  fleetnms arc01 and arc02
+  hosts: localhost
+  roles:
+    - restart-flrnms-arc-ec2
+- name: restart clients infra
+  hosts: rf-clients
+  become: yes
+  roles:
+    - restart-client-infra
+- name: turn on  satdb
+  hosts: rf-satdb
+  roles:
+    - turn-on-satdb
+#        NO need to start fdss
+#    - name: turn on  fdss01
+#      hosts: rf-fdss
+#      roles:
+#        - turn-on-fdss
+#        NO need to start any processes on wks01-03
+#     - name: turn on  wks
+#       hosts: rf-wks
+#       roles:
+#         - turn-on-wks
+- name: turn on  fltsrv
+  hosts: rf-fltsrv
+  roles:
+    - turn-on-fltsrv
+- name: turn on  rf-hfsrv
+  hosts: rf-hfsrv
+  roles:
+    - turn-on-hfsrv
+#        NO need to start Agents 
+#   - name: turn on  agentsv
+#     hosts: rf-agents
+#     become: yes
+#     roles:
+#       - turn-on-agents
